@@ -1,0 +1,133 @@
+/**
+ * @name system24 (Catppuccin Mocha)
+ * @description a tui-style discord theme. converted to Catppuccin Mocha.
+ * @author refact0r (Modified for Akash)
+ * @version 2.0.0
+ * @website https://github.com/refact0r/system24
+*/
+
+/* import theme modules */
+@import url('https://refact0r.github.io/system24/build/system24.css');
+
+body {
+    /* font - Updated to JetBrains Mono for the Catppuccin look */
+    --font: 'JetBrains Mono', 'DM Mono';
+    --code-font: 'JetBrains Mono', 'DM Mono';
+    font-weight: 300;
+    letter-spacing: -0.05ch;
+
+    /* sizes */
+    --gap: 12px;
+    --divider-thickness: 4px;
+    --border-thickness: 2px;
+    --border-hover-transition: 0.2s ease;
+
+    /* animation/transition options */
+    --animations: off;
+    --list-item-transition: 0.2s ease;
+    --dms-icon-svg-transition: 0.4s ease;
+
+    /* top bar options */
+    --top-bar-height: var(--gap);
+    --top-bar-button-position: titlebar;
+    --top-bar-title-position: off;
+    --subtle-top-bar-title: off;
+
+    /* window controls */
+    --custom-window-controls: off;
+    --window-control-size: 14px;
+
+    /* dms button options */
+    --custom-dms-icon: off;
+    --dms-icon-svg-url: url('');
+    --dms-icon-svg-size: 90%;
+    --dms-icon-color-before: var(--icon-secondary);
+    --dms-icon-color-after: var(--white);
+    --custom-dms-background: off;
+    --dms-background-image-url: url('');
+    --dms-background-image-size: cover;
+    --dms-background-color: linear-gradient(70deg, var(--blue-2), var(--purple-2), var(--red-2));
+
+    /* background image options */
+    --background-image: off;
+    --background-image-url: url('');
+
+    /* transparency/blur options */
+    --transparency-tweaks: off;
+    --remove-bg-layer: off;
+    --panel-blur: off;
+    --blur-amount: 12px;
+    --bg-floating: var(--bg-3);
+
+    /* other options */
+    --small-user-panel: on;
+
+    /* unrounding options */
+    --unrounding: on;
+
+    /* styling options */
+    --custom-spotify-bar: on;
+    --ascii-titles: on;
+    --ascii-loader: system24;
+
+    /* panel labels */
+    --panel-labels: on;
+    --label-color: var(--text-muted);
+    --label-font-weight: 500;
+}
+
+/* color options - Catppuccin Mocha */
+:root {
+    --colors: on;
+
+    /* text colors */
+    --text-0: #11111b; /* crust (text on colored elements) */
+    --text-1: #cdd6f4; /* text */
+    --text-2: #f5e0dc; /* rosewater (headings) */
+    --text-3: #bac2de; /* subtext 1 */
+    --text-4: #a6adc8; /* subtext 0 */
+    --text-5: #585b70; /* surface 2 (muted) */
+
+    /* background and dark colors */
+    --bg-1: #313244; /* surface 0 */
+    --bg-2: #1e1e2e; /* base */
+    --bg-3: #11111b; /* crust */
+    --bg-4: #181825; /* mantle */
+    --hover: rgba(137, 180, 250, 0.1);
+    --active: rgba(137, 180, 250, 0.2);
+    --active-2: rgba(137, 180, 250, 0.3);
+    --message-hover: rgba(17, 17, 27, 0.4);
+
+    /* accent colors (Sapphire/Blue) */
+    --accent-1: #b4befe;
+    --accent-2: #89b4fa;
+    --accent-3: #74c7ec;
+    --accent-4: #89dceb;
+    --accent-5: #94e2d5;
+    --accent-new: #fab387;
+
+    --mention: linear-gradient(to right, rgba(203, 166, 247, 0.1) 40%, transparent);
+    --mention-hover: linear-gradient(to right, rgba(203, 166, 247, 0.15) 40%, transparent);
+    --reply: linear-gradient(to right, rgba(137, 180, 250, 0.1) 40%, transparent);
+    --reply-hover: linear-gradient(to right, rgba(137, 180, 250, 0.15) 40%, transparent);
+
+    /* status indicator colors */
+    --online: #a6e3a1;
+    --dnd: #f38ba8;
+    --idle: #f9e2af;
+    --streaming: #cba6f7;
+    --offline: #6c7086;
+
+    /* border colors */
+    --border-light: #45475a;
+    --border: #585b70;
+    --border-hover: #89b4fa;
+    --button-border: transparent;
+
+    /* Base Palette */
+    --red-1: #f38ba8; --red-2: #eba0ac; --red-3: #f38ba8; --red-4: #e85d81; --red-5: #c24666;
+    --green-1: #a6e3a1; --green-2: #94e2d5; --green-3: #a6e3a1; --green-4: #87d97f; --green-5: #68b361;
+    --blue-1: #89b4fa; --blue-2: #b4befe; --blue-3: #89b4fa; --blue-4: #739df2; --blue-5: #5883d9;
+    --yellow-1: #f9e2af; --yellow-2: #fae3b0; --yellow-3: #f9e2af; --yellow-4: #e9cc84; --yellow-5: #d4b561;
+    --purple-1: #cba6f7; --purple-2: #f5c2e7; --purple-3: #cba6f7; --purple-4: #b386e8; --purple-5: #9966d6;
+}
