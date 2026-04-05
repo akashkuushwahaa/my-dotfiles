@@ -1,49 +1,62 @@
 # 🐧 Akash's Windows Dotfiles
 
-My personal configuration files for a Catppuccin Mocha themed workspace.
+A complete Windows workspace customization based on the **Catppuccin Mocha** palette. This setup features a tiling window manager, custom status bar, and deep application styling.
 
 ## 🛠️ Applications Included
+* **GlazeWM**: Tiling Window Manager for Windows.
+* **YASB**: Yet Another Status Bar (highly customizable top/bottom bar).
+* **Zen Browser**: Custom `userChrome` and `userContent` styles.
 * **VS Code**: Custom UI via `Custom CSS and JS Loader`.
 * **Discord**: Client enhancements via `Vencord`.
-* **Zen Browser**: Web styling via `Stylus`.
-* **Windows System**: UI tweaks via `Windhawk`.
+* **Windhawk**: System-wide UI tweaks (Taskbar, Start Menu, etc.).
 
 ---
 
 ## 🚀 Installation
 
-### 1. VS Code (Custom CSS)
-1. Install the [Custom CSS and JS Loader](https://marketplace.visualstudio.com/items?itemName=be5invis.vscode-custom-css) extension.
-2. Copy `vscode/settings.json` to `%APPDATA%\Code\User\settings.json`.
-3. Copy your `.css` file to a stable folder.
-4. Update the `vscode_custom_css.imports` path in your VS Code settings to point to your local CSS file.
-5. Press `Ctrl + Shift + P`, run **"Enable Custom CSS and JS"**, and restart.
+### 1. GlazeWM (Window Manager)
+* Copy `glazewm/config.yaml` to `%USERPROFILE%\.glazewm\config.yaml`.
+* Restart GlazeWM to apply keybindings and gaps.
 
-### 2. Discord (Vencord)
-1. Install [Vencord](https://vencord.dev/).
-2. Open Discord settings -> **Vencord** -> **Themes**.
-3. Click **"Open Themes Folder"** and drop your `.css` files there.
-4. Toggle the theme "On" in the Discord menu.
+### 2. YASB (Status Bar)
+* Install [YASB](https://github.com/denBot/yasb).
+* Copy the contents of `yasb/` to `%USERPROFILE%\.yasb\`.
+* Ensure `config.yaml` and `styles.css` are in the root of that folder.
 
-### 3. Zen Browser (Stylus)
-1. Install the [Stylus Extension](https://add-ons.mozilla.org/en-US/firefox/addon/styl-us/).
-2. Open the Stylus Dashboard -> **Manage**.
-3. Click **Import** and select the `.json` backup from the `zen/` folder of this repo.
+### 3. Zen Browser
+* Open Zen and go to `about:support`.
+* Click **"Open Folder"** next to *Profile Folder*.
+* Create a folder named `chrome` if it doesn't exist.
+* Copy all files from `zen browser/` into that `chrome` folder.
+* **Note:** Ensure `toolkit.legacyUserProfileCustomizations.stylesheets` is set to `true` in `about:config`.
 
-### 4. Windows Notification Center (Windhawk)
-1. Install [Windhawk](https://windhawk.net/).
-2. Install the **"Notification Center Styler"** mod from the Windhawk library.
-3. Go to the mod's **Settings** tab.
-4. Click on the **Advanced** tab / **Export/Import** section.
-5. Import `windhawk/notification-center-styler.json` from this repo to apply the styles.
+### 4. VS Code (Custom CSS)
+1. Install [Custom CSS and JS Loader](https://marketplace.visualstudio.com/items?itemName=be5invis.vscode-custom-css).
+2. Copy `vs-code/settings.json` to `%APPDATA%\Code\User\`.
+3. Link `vs-code/custom-vscode.css` in your settings imports.
+4. Run **"Enable Custom CSS and JS"** from the Command Palette (`Ctrl+Shift+P`).
+
+### 5. Discord (Vencord)
+1. Open Discord Settings -> **Vencord** -> **Themes**.
+2. Click **"Open Themes Folder"**.
+3. Move `discord/system24-catppuccin-mocha.theme.css` into that folder.
+
+### 6. Windhawk (System Tweaks)
+* Open **Windhawk** -> **Library**.
+* For each `.json` file in the `windhawk/` folder:
+    1. Install the corresponding mod (e.g., Taskbar Styler).
+    2. Go to **Settings** -> **Advanced** -> **Import**.
+    3. Paste/Upload the `.json` configuration.
 
 ---
 
 ## 📂 Repository Structure
-* `vscode/`: Settings and custom CSS.
-* `discord/`: Vencord `.theme.css` files.
-* `zen/`: Stylus backups and CSS.
-* `windhawk/`: Mod configurations (Notification Center Styler).
+* `glazewm/`: Window management rules and keybinds.
+* `yasb/`: Status bar styling and widgets.
+* `vs-code/`: Editor settings and custom CSS.
+* `windhawk/`: Massive collection of system UI tweaks.
+* `zen browser/`: Full browser UI customization (CSS + SVG logo).
+* `discord/`: Catppuccin Mocha theme for Vencord.
 
 ## 🎨 Theme
-**Colors:** [Catppuccin Mocha](https://github.com/catppuccin/catppuccin)
+**Palette:** [Catppuccin Mocha](https://github.com/catppuccin/catppuccin)
