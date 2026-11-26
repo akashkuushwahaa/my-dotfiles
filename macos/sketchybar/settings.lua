@@ -1,0 +1,83 @@
+--- @type "macos_native" | "aerospace"
+WINDOW_MANAGER = "aerospace"
+--- @type "gnix" | "compact"
+PRESET = "compact"
+--- @type "catppuccin_mocha" | "catppuccin_latte" | "rose_pine" | "tokyo_night" | "nord_light"
+THEME = "catppuccin_mocha"
+
+SBAR_HOME = (os.getenv("HOME") or "~") .. "/.config/sketchybar/"
+ITEMS_HOME = SBAR_HOME .. "items/"
+HELPERS_HOME = SBAR_HOME .. "helpers/"
+
+PRESET_OPTIONS = {
+  gnix = {
+    BORDER_WIDTH = 3,
+    HEIGHT = 32,
+    Y_OFFSET = 1,
+    MARGIN = 5,
+    CORNER_RADIUS = 10,
+  },
+  compact = {
+    BORDER_WIDTH = 0,
+    -- floating; gaps match aerospace (5). Y_OFFSET + HEIGHT + 5 = aerospace gaps.outer.top (40) on the main monitor
+    HEIGHT = 30,
+    Y_OFFSET = 5,
+    MARGIN = 5,
+    CORNER_RADIUS = 10,
+  },
+}
+
+FONT = {
+  icon_font = "RecMonoCasual Nerd Font",
+  label_font = "RecMonoCasual Nerd Font", -- SF Mono, Monaspace Radon
+  style_map = {
+    ["Regular"] = "Regular",
+    ["Semibold"] = "Medium",
+    ["Bold"] = "Bold",
+    ["Black"] = "ExtraBold",
+  },
+}
+
+MODULES = {
+  logo = { enable = true },
+  menus = { enable = true },
+  spaces = { enable = true },
+  front_app = { enable = true },
+  calendar = { enable = true },
+  battery = { enable = true, style = "icon" },
+  wifi = { enable = false },
+  volume = { enable = false },
+  chat = { enable = false }, -- QQ / WeChat indicators
+  brew = { enable = false },
+  toggle_stats = { enable = false },
+  netspeed = { enable = true },
+  docker = { enable = false },
+  wakatime = { enable = true }, -- today's coding time
+  cpu = { enable = true },
+  mem = { enable = true },
+  music = { enable = false },
+}
+
+SPACES = {
+  --- @type "greek_uppercase" | "greek_lowercase" | nil
+  ID_STYLE = nil, -- show the AeroSpace workspace name (0-9)
+  ITEM_PADDING = 4,
+}
+
+MUSIC = {
+  CONTROLLER = "media-control",
+  ALBUM_ART_SIZE = 1280,
+  TITLE_MAX_CHARS = 15,
+  DEFAULT_ARTIST = "Various Artists",
+  DEFAULT_ALBUM = "No Album",
+  DEFAULT_ALBUM_ART_PATH = ITEMS_HOME .. "music/default_albumarts/various_artists_mocha.jpg",
+  POPUP_WIDTH = 80,
+  POPUP_ITEMS = { shuffle = false, repeating = false },
+}
+
+WIFI = { PROXY_APP = "FlClash" }
+
+PADDINGS = 3
+GROUP_PADDINGS = 5
+-- gap between right-side groups (netspeed, RAM, CPU, clock)
+RIGHT_GAP = 16

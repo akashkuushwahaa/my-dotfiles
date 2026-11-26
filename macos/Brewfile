@@ -1,0 +1,21 @@
+# Dependencies for the macOS configs in this folder.
+# Install with: brew bundle --file=macos/Brewfile
+tap "nikitabobko/tap"
+tap "felixkratz/formulae"
+tap "joncrangle/tap"
+
+cask "nikitabobko/tap/aerospace"            # tiling window manager
+brew "felixkratz/formulae/sketchybar"       # status bar
+brew "felixkratz/formulae/borders"          # window borders (JankyBorders)
+brew "joncrangle/tap/sketchybar-system-stats" # CPU / RAM / netspeed for sketchybar
+brew "lua"                                  # runs sketchybarrc
+brew "jq"                                   # sketchybar music + Claude statusline
+brew "switchaudio-osx"                      # sketchybar volume popup
+brew "media-control"                        # sketchybar now playing
+brew "imagemagick"                          # sketchybar album art
+brew "tmux"
+cask "ghostty"
+
+cask "font-jetbrains-mono-nerd-font"        # Ghostty / tmux
+cask "font-recursive-mono-nerd-font"        # sketchybar labels
+cask "font-sketchybar-app-font"             # sketchybar app icons

@@ -1,8 +1,11 @@
-# 🐧 Akash's Windows Dotfiles
+# 🐧 Akash's Dotfiles (Windows + macOS)
 
-A complete Windows workspace customization based on the **Catppuccin Mocha** palette. This setup features a tiling window manager, custom status bar, and deep application styling.
+Windows and macOS workspace customization based on the **Catppuccin Mocha** palette: a tiling window manager, custom status bar, and deep application styling on both.
 
-## 🛠️ Applications Included
+* **Windows** configs live at the repo root (sections below).
+* **macOS** configs live in [`macos/`](macos) — see [🍎 macOS](#-macos).
+
+## 🛠️ Windows Applications Included
 * **GlazeWM**: Tiling Window Manager for Windows.
 * **YASB**: Yet Another Status Bar (highly customizable top/bottom bar).
 * **Zen Browser**: Custom `userChrome` and `userContent` styles.
@@ -12,7 +15,7 @@ A complete Windows workspace customization based on the **Catppuccin Mocha** pal
 
 ---
 
-## 🚀 Installation
+## 🚀 Windows Installation
 
 ### 1. GlazeWM (Window Manager)
 * Copy `glazewm/config.yaml` to `%USERPROFILE%\.glazewm\config.yaml`.
@@ -50,6 +53,35 @@ A complete Windows workspace customization based on the **Catppuccin Mocha** pal
 
 ---
 
+## 🍎 macOS
+
+| Folder | App | Installs to |
+|--------|-----|-------------|
+| `macos/aerospace/` | [AeroSpace](https://github.com/nikitabobko/AeroSpace) tiling WM (starts sketchybar + borders) | `~/.config/aerospace/aerospace.toml` |
+| `macos/sketchybar/` | [SketchyBar](https://github.com/FelixKratz/SketchyBar) Lua bar, based on [Efterklang/sketchybar](https://github.com/Efterklang/sketchybar) | `~/.config/sketchybar/` |
+| `macos/borders/` | [JankyBorders](https://github.com/FelixKratz/JankyBorders) window borders | `~/.config/borders/bordersrc` |
+| `macos/ghostty/` | [Ghostty](https://ghostty.org) terminal + starfield shader | `~/.config/ghostty/` |
+| `macos/tmux/` | tmux (prefix `C-s`, Catppuccin bar on top, plugins via tpm) | `~/.config/tmux/tmux.conf` |
+| `macos/claude/` | Claude Code Catppuccin statusline | `~/.claude/` |
+| `macos/git/` | Global gitignore | `~/.config/git/ignore` |
+| `macos/zsh/` | `.zshrc` / `.zprofile` (reference copies, merge by hand) | `~/` |
+
+### Install
+
+```bash
+./macos/install.sh --brew   # brew bundle macos/Brewfile, then symlink everything
+./macos/install.sh          # symlink only
+```
+
+Existing files are moved aside to `*.bak-<timestamp>` before linking. Then:
+
+1. **Claude statusline:** merge `macos/claude/settings.statusline.json` into `~/.claude/settings.json`.
+2. **SketchyBar:** install SbarLua and (optionally) the app icon map — see [`macos/sketchybar/README.md`](macos/sketchybar/README.md).
+3. **tmux:** open tmux and press `C-s` then `I` to install plugins.
+4. **macOS settings:** auto-hide the native menu bar, and grant Accessibility to AeroSpace and sketchybar.
+
+---
+
 ## 📂 Repository Structure
 * `glazewm/`: Window management rules and keybinds.
 * `yasb/`: Status bar styling and widgets.
@@ -57,6 +89,7 @@ A complete Windows workspace customization based on the **Catppuccin Mocha** pal
 * `windhawk/`: Massive collection of system UI tweaks.
 * `zen browser/`: Full browser UI customization (CSS + SVG logo).
 * `discord/`: Catppuccin Mocha theme for Vencord.
+* `macos/`: AeroSpace, SketchyBar, borders, Ghostty, tmux, Claude statusline, zsh.
 
 ## 🎨 Theme
 **Palette:** [Catppuccin Mocha](https://github.com/catppuccin/catppuccin)
