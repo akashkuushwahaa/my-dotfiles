@@ -12,6 +12,7 @@ Windows and macOS workspace customization based on the **Catppuccin Mocha** pale
 * **VS Code**: Custom UI via `Custom CSS and JS Loader`.
 * **Discord**: Client enhancements via `Vencord`.
 * **Windhawk**: System-wide UI tweaks (Taskbar, Start Menu, etc.).
+* **OBS Studio**, **PowerShell**, **Windows Terminal**, **Flow Launcher**: Themes and settings.
 
 ---
 
@@ -51,6 +52,24 @@ Windows and macOS workspace customization based on the **Catppuccin Mocha** pale
     2. Go to **Settings** -> **Advanced** -> **Import**.
     3. Paste/Upload the `.json` configuration.
 
+### 7. OBS Studio
+* Copy `obs/Catppuccin_Mocha.ovt` to `%APPDATA%\obs-studio\themes\`.
+* Restart OBS, then pick the theme in **Settings** -> **Appearance**. It extends OBS's `Catppuccin` base theme.
+
+### 8. PowerShell
+* Copy `powershell/Microsoft.PowerShell_profile.ps1` to the path shown by `$PROFILE` (back up your existing profile first).
+* It runs [Fastfetch](https://github.com/fastfetch-cli/fastfetch) with `~/.config/fastfetch/config.jsonc` (that config is not included here).
+
+### 9. Windows Terminal
+* Open **Settings** -> **Open JSON file**, back it up, and replace it with `windows-terminal/settings.json`.
+* Needs [JetBrainsMono Nerd Font](https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip).
+
+### 10. Flow Launcher
+* Copy `flow-launcher/Catppuccin Mocha.xaml` into the folder opened by **Settings** -> **Appearance** -> **Open Theme Folder**.
+* Restart Flow Launcher and select the theme.
+
+The configs in steps 7-10 come from [SleepyCatHey/Ultimate-Win11-Setup](https://github.com/SleepyCatHey/Ultimate-Win11-Setup) (MIT, see [`LICENSE-Ultimate-Win11-Setup`](LICENSE-Ultimate-Win11-Setup)).
+
 ---
 
 ## 🍎 macOS
@@ -89,6 +108,7 @@ Existing files are moved aside to `*.bak-<timestamp>` before linking. Then:
 * `windhawk/`: Massive collection of system UI tweaks.
 * `zen browser/`: Full browser UI customization (CSS + SVG logo).
 * `discord/`: Catppuccin Mocha theme for Vencord.
+* `obs/`, `powershell/`, `windows-terminal/`, `flow-launcher/`: Themes and settings for each app.
 * `macos/`: AeroSpace, SketchyBar, borders, Ghostty, tmux, Claude statusline, zsh.
 
 ## 🎨 Theme
